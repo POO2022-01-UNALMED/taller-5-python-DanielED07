@@ -28,7 +28,7 @@ class Mamifero(Animal):
 
     @classmethod
     def cantidadMamiferos(cls):
-        return cls.caballos+cls.leones+len(cls._listado)
+        return cls.caballos+cls.leones  # +len(cls._listado)
 
     def isPelaje(self):
         return self._pelaje

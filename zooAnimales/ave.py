@@ -30,7 +30,7 @@ class Ave(Animal):
 
     @classmethod
     def cantidadAves(cls):
-        return cls.halcones+cls.aguilas+len(cls._listado)
+        return cls.halcones+cls.aguilas  # +len(cls._listado)
 
     def getColorPlumas(self):
         return self._colorPlumas

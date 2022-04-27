@@ -32,7 +32,7 @@ class Reptil(Animal):
 
     @classmethod
     def cantidadReptiles(cls):
-        return cls.iguanas+cls.serpientes+len(cls._listado)
+        return cls.iguanas+cls.serpientes  # +len(cls._listado)
 
     def getColorEscamas(self):
         return self._colorEscamas

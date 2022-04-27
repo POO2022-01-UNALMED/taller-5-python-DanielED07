@@ -31,7 +31,7 @@ class Anfibio(Animal):
 
     @classmethod
     def cantidadAnfibios(cls):
-        return cls.ranas+cls.salamandras+len(cls._listado)
+        return cls.ranas+cls.salamandras  # +len(cls._listado)
 
     def getColorPiel(self):
         return self._colorPiel

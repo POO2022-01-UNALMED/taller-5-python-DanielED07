@@ -31,7 +31,7 @@ class Pez(Animal):
 
     @classmethod
     def cantidadPeces(cls):
-        return cls.salmones+cls.bacalaos+len(cls._listado)
+        return cls.salmones+cls.bacalaos  # +len(cls._listado)
 
     def getColorEscamas(self):
         return self._colorEscamas
