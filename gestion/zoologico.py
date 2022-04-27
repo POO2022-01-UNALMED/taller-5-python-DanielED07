@@ -1,7 +1,4 @@
 
-from gestion.zona import Zona
-
-
 class Zoologico():
 
     def __init__(self, nombre=None, ubicacion=None, zonas=None):
@@ -10,6 +7,7 @@ class Zoologico():
         self._zonas = zonas
 
     def cantidadTotalAnimales(self):
+        from gestion.zona import Zona
         k = 0
         for i in self._zonas:
             if(isinstance(i, Zona)):
@@ -17,6 +15,7 @@ class Zoologico():
         return k
 
     def agregarZonas(self, z):
+        from gestion.zona import Zona
         if(isinstance(z, Zona)):
             if(self._zonas == None):
                 self._zonas = []
