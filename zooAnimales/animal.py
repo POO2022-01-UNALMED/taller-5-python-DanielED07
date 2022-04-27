@@ -11,10 +11,10 @@ class Animal():
         self._genero = gen
         if(zon == None):
             self._zona = []
-            self._zona = zon
+            self._zona.append(zon)
         if(isinstance(zon, Zona)):
             self._zona = []
-            self._zona[0] = zon
+            self._zona.append(zon)
         Animal._totalAnimales += 1
 
     @classmethod
@@ -30,8 +30,16 @@ class Animal():
     def movimiento():
         return "despazarse"
 
-    def __str__(self):
-        return "Mi nombre es "+self._nombre+" , tengo una edad de "+self._edad+" , habito en "+self._habitat+" y mi genero es "+self._genero+",la zona en la que me ubico es "+self._zona[0].getNombre()+" en el "+self._zona[0].getZoo().getNombre() if self._zona[0] != None else "Mi nombre es "+self._nombre+", tengo una edad de "+self._edad+", habito en "+self._habitat+" y mi genero es "+self._genero
+    def toString(self):
+        if self._zona[0] != None:
+            k = "Mi nombre es "+self._nombre+" , tengo una edad de "+str(self._edad)+" , habito en "+self._habitat+" y mi genero es " + \
+                self._genero+",la zona en la que me ubico es " + \
+                self._zona[0].getNombre()+" en el " + \
+                self._zona[0].getZoo().getNombre()
+        else:
+            k = "Mi nombre es "+self._nombre+", tengo una edad de "+str(self._edad) + \
+                ", habito en "+self._habitat+" y mi genero es "+self._genero
+        return k
 
     @classmethod
     def getTotalAnimales(cls):
